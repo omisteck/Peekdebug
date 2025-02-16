@@ -10,10 +10,39 @@ import { FuseV1Options, FuseVersion } from '@electron/fuses';
 
 import { mainConfig } from './webpack.main.config';
 import { rendererConfig } from './webpack.renderer.config';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+// Fallback to .env if the environment-specific file doesn't exist
+if (!process.env.APPLE_ID) {
+  dotenv.config({ path: '.env' });
+}
+
+const appleId = process.env.APPLE_ID;
+const appleIdPassword = process.env.APPLE_ID_PASSWORD;
+const teamId = process.env.TEAM_ID;
+
+if (!appleId || !appleIdPassword || !teamId) {
+  throw new Error('Missing required environment variables for macOS notarization.');
+}
 
 const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
+    icon: './build/icons/icon',
+    // Configure universal binary support for macOS
+    osxUniversal: {
+      mergeASARs: true,
+    },
+    // Sign the application for macOS
+    osxSign: {},
+
+    osxNotarize: {
+        appleId,
+        appleIdPassword,
+        teamId
+    },
   },
   rebuildConfig: {},
   makers: [new MakerSquirrel({}), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({})],
