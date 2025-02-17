@@ -15,7 +15,7 @@ import { z } from 'zod';
  * It acts as a bridge between external applications and the Peek UI.
  */
 export class LogServer {
-
+// @ts-expect-error Server type requires generic params but works fine without them
   private readonly server: Server;
   private readonly mainWindow: BrowserWindow;
   private isReceivingEnabled = true;

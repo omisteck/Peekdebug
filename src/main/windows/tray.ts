@@ -27,9 +27,9 @@ export class TrayManager {
     private readonly mainWindow: BrowserWindow;
 
     constructor(mainWindow: BrowserWindow) {
-        this.mainWindow = mainWindow;
+            this.mainWindow = mainWindow;
 
-        const trayIconPath: string = path.join(app.getAppPath(), 'build/icons/trayIcon.png')
+        const trayIconPath: string = path.join(__dirname, 'build/icons/trayIcon.png')
         
         const icon = nativeImage.createFromPath(trayIconPath)
             .resize({
