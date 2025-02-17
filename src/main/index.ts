@@ -122,10 +122,11 @@ app.on("activate", async () => {
         defaultSettings.DEFAULT_PORT
       );
       await windowManager.createWindow(port);
-    } else {
-      windowManager.show();
     }
   }
+
+  windowManager.show();
+
 });
 
 // Prevent default quit behavior
