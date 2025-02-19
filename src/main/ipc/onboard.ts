@@ -1,11 +1,12 @@
 import { ipcMain } from "electron";
 import axios, { isAxiosError } from "axios";
+import { defaultSettings } from "../../shared/settings";
 
 export function registerOnboardHandlers(): void {
     ipcMain.handle("login", async (event, data) => {
 
         try {
-          const response = await axios.post(process.env.API_ENDPOINT + "/login", {
+          const response = await axios.post(defaultSettings.API_ENDPOINT + "/login", {
             email: data.email,
             password: data.password
           });
@@ -30,7 +31,7 @@ export function registerOnboardHandlers(): void {
       ipcMain.handle("register", async (event, data) => {
         try {
           
-          const response = await axios.post(process.env.API_ENDPOINT + "/register", data);
+          const response = await axios.post(defaultSettings.API_ENDPOINT + "/register", data);
           console.log("register successful", response.data)
           return response.data;
     
@@ -51,7 +52,7 @@ export function registerOnboardHandlers(): void {
     
       ipcMain.handle("verify-otp", async (event, data) => {
         try {
-          const response = await axios.post(process.env.API_ENDPOINT + "/otp/verify", data);
+          const response = await axios.post(defaultSettings.API_ENDPOINT + "/otp/verify", data);
           console.log("otp verify successful", response.data)
           return response.data;
         } catch (error) {
@@ -68,7 +69,7 @@ export function registerOnboardHandlers(): void {
     
       ipcMain.handle("request-otp", async (event, data) => {
         try {
-          const response = await axios.post(process.env.API_ENDPOINT + "/otp", data);
+          const response = await axios.post(defaultSettings.API_ENDPOINT + "/otp", data);
           console.log("otp request successful", response.data)
           return response.data;
         } catch (error) {

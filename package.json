@@ -1,8 +1,8 @@
 {
   "name": "peekdebug",
-  "productName": "peekdebug",
+  "productName": "Peek Debug",
   "version": "0.0.1",
-  "description": "My Electron application description",
+  "description": "Make Debugging A Joy, Not A Job. 🛠️✨ With Peek, powerful filtering, smart formatting, and real-time monitoring turn chaos into clarity. Spend less time fixing and more time building",
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",

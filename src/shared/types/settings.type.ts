@@ -17,6 +17,7 @@ export interface IconConfig {
 
 export interface AppConfig {
   readonly DEFAULT_PORT: number;
+  readonly API_ENDPOINT: string;
   readonly WINDOW: Readonly<WindowConfig>;
   readonly ICON_SIZE: Readonly<IconConfig>;
 }

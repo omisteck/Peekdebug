@@ -66,7 +66,7 @@ app.on("ready", async () => {
 
       autoUpdater.setFeedURL({ url });
 
-      // Check for updates every 12 hours instead of every 6 seconds
+      // Check for updates every 2 hours
       setInterval(() => {
         autoUpdater.checkForUpdates();
         console.info("Checking for updates...");

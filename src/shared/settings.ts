@@ -16,6 +16,8 @@ export const defaultSettings: Readonly<AppConfig> = {
     /** Default port for the log server. Matches original Ray's port */
     DEFAULT_PORT: parseInt(process.env.DEFAULT_PORT || '44315'),
 
+    /** API endpoint */
+    API_ENDPOINT: process.env.API_ENDPOINT || 'https://peekdebug.com/api',
     /** Window dimension settings */
     WINDOW: {
         /** Default window width in pixels */
