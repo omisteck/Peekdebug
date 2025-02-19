@@ -1,0 +1,19 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Omis Technology. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+      font-family: 'Varela Round';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(../assets/fonts/varela_round/VarelaRound-Regular.ttf) format('truetype');
+    }
+  }

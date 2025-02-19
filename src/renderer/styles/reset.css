@@ -1,0 +1,110 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Omis Technology. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+/* Universal Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset Margins and Padding */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 Display Reset */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Body Reset */
+body {
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+/* Lists Reset */
+ol, ul {
+  list-style: none;
+}
+
+/* Quotes Reset */
+blockquote, q {
+  quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+  content: '';
+  content: none;
+}
+
+/* Table Reset */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Anchor Reset */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images Reset */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Input and Button Reset */
+button, input, select, textarea {
+  font: inherit;
+  margin: 0;
+  border: none;
+  padding: 0;
+  background: none;
+  color: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Remove focus outlines unless keyboard-focused */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid blue; /* Optional: Style focus for accessibility */
+}

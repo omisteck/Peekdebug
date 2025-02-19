@@ -1,0 +1,82 @@
+@keyframes moveInCircle {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes moveVertical {
+  0% { transform: translateY(-50%); }
+  50% { transform: translateY(50%); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes orbitChaotic1 {
+  0% { 
+    transform: translate(80%, -60%);
+  }
+  30% { 
+    transform: translate(-40%, 90%);
+  }
+  55% { 
+    transform: translate(-90%, -30%);
+  }
+  75% { 
+    transform: translate(50%, 70%);
+  }
+  100% { 
+    transform: translate(80%, -60%);
+  }
+}
+
+@keyframes orbitChaotic2 {
+  0% { transform: translate(0%, 0%) scale(1) }
+  20% { transform: translate(25%, -15%) scale(1.1) }
+  40% { transform: translate(15%, 25%) scale(0.9) }
+  60% { transform: translate(-25%, 15%) scale(1.1) }
+  80% { transform: translate(-15%, -25%) scale(0.9) }
+  100% { transform: translate(0%, 0%) scale(1) }
+}
+
+
+@keyframes orbitChaotic4 {
+  0% { 
+    transform: translate(-50%, 40%);
+  }
+  20% { 
+    transform: translate(90%, 70%);
+  }
+  45% { 
+    transform: translate(-30%, -80%);
+  }
+  80% { 
+    transform: translate(60%, -30%);
+  }
+  100% { 
+    transform: translate(-50%, 40%);
+  }
+}
+
+
+.animate-orbitChaotic1 {
+  animation: orbitChaotic1 30 reverse infinite;
+}
+
+.animate-orbitChaotic4 {
+  animation: orbitChaotic4 15s linear infinite;
+}
+
+.animate-orbitChaotic2 {
+  animation: orbitChaotic2 20s ease-in-out infinite;
+}
+
+.animate-moveInCircle {
+  animation: moveInCircle 20s ease infinite;
+}
+
+.animate-moveInCircleSlow {
+  animation: moveInCircle 20s linear infinite;
+}
+
+.animate-moveVertical {
+  animation: moveVertical 20s ease infinite;
+}
