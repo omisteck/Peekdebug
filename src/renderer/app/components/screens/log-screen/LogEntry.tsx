@@ -129,7 +129,7 @@ const LogEntry = ({ type = 'log', content, origin, status }: Payload) => {
       }
       break;
 
-    default:
+    case 'table':
         return <KeyValueDisplay data={content.values} />;
   }
 
